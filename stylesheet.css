@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin card($color) {
   padding: 40px 28px;
 	margin: 16px 8px;
@@ -8,7 +10,6 @@
 		margin: 16px auto 20px;
 		display: block;
 	}
-	/* Tambahkan code untuk tag a dibawah */
 	a {
 	  padding: 16px 32px;
 		background-color: #ffffff;
@@ -17,18 +18,16 @@
 		color: $color;
 		&:hover {
 			color: #ffffff;
-			/* tambahkan background-color disini */
 			background-color: darken($color, 10%);
 		}
 	}
-	/* Tambahkan code untuk tag h4 dibawah */
 	h4 {
 	  color: darken($color, 20%);
 	}
 }
 
-body {
-  min-width: 460px;
+body {   
+  min-width: 700px;
 	text-align: center;
 	font-family: "Hiragino Kaku Gothic ProN";
 	background-color: #f0f5fc;
@@ -57,12 +56,19 @@ header {
 }
 
 .html {
-  @include card(#1bd7cf);
+  @include card($html);
 }
 
 .javascript {
-  @include card(#ffe400);
+  @include card($javascript);
 }
+
+/* Tambahkan class .ruby dengan style yang sama seperti .html dan .javascript */
+.ruby {
+  @include card($ruby);
+}
+
+
 
 footer {
 	margin: 100px 0 32px;
